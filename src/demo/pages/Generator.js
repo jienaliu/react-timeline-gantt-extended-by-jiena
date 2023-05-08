@@ -28,6 +28,13 @@ class Generator {
 
     return { data: data, links: links };
   }
+  generateAssignee(){
+    let projectAssigneeList=[];
+    for(let i=0;i<10;i++){
+      projectAssigneeList.push({id:i,value:"jiena-"+i});
+    }
+    return projectAssigneeList;
+  }
 
   addRecord(starDate, i, result) {
     let endDate = new Date(starDate.getTime());

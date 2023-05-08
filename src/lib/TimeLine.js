@@ -336,6 +336,8 @@ class TimeLine extends Component {
             onUpdateTask={this.props.onUpdateTask}
             onScroll={this.verticalChange}
             nonEditable={this.props.nonEditableName}
+            dropdownListData={this.props.dropdownListData}
+            onHandleDropdownChange={this.props.onHandleDropdownChange}
           />
           <VerticalSpliter onTaskListSizing={this.onTaskListSizing} />
         </div>

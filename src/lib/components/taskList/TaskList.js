@@ -31,7 +31,9 @@ export class TaskRow extends Component {
         style={{
           ...Config.values.taskList.task.style,
           top: this.props.top,
-          height: this.props.itemheight
+          height: this.props.itemheight,
+          display:'flex',
+          justifyContent:'space-around'
         }}
         onClick={(e) => this.props.onSelectItem(this.props.item)}
       >
@@ -42,11 +44,29 @@ export class TaskRow extends Component {
         ) : (
             <ContentEditable value={this.props.label} index={this.props.index} onChange={this.onChange} />
           )}
+        <Dropdown dropdownListData={this.props.dropdownListData} onHandleDropdownChange={this.props.onHandleDropdownChange} style={{textAlign:'right'}}/>
       </div>
     );
   }
 }
+const Dropdown=({dropdownListData,onHandleDropdownChange})=>{
+  if(!dropdownListData){
+    return null;
+  }
+  return(
+    <select id="simple-select" onChange={onHandleDropdownChange}>
+      <option key={-1} value={-1}>Assign project to...</option>
+      {dropdownListData.map((item)=>{
+        return(
+        <option key={item.id} value={item.value}>
+          {item.value}
+        </option>)
 
+    })}
+    </select>
+  )
+
+}
 export default class TaskList extends Component {
   constructor(props) {
     super(props);
@@ -75,6 +95,8 @@ export default class TaskList extends Component {
             onUpdateTask={this.props.onUpdateTask}
             onSelectItem={this.props.onSelectItem}
             nonEditable={this.props.nonEditable}
+            dropdownListData={this.props.dropdownListData}
+            onHandleDropdownChange={this.props.onHandleDropdownChange}
           />
         );
       });

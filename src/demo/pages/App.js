@@ -77,6 +77,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     let result = Generator.generateData();
+    let projectAssignee=Generator.generateAssignee();
     this.data = result.data;
     this.state = {
       itemheight: 20,
@@ -84,7 +85,8 @@ class App extends Component {
       selectedItem: null,
       timelineMode: 'month',
       links: result.links,
-      nonEditableName: false
+      nonEditableName: false,
+      dropdownListData:projectAssignee
     };
   }
 
@@ -178,7 +180,9 @@ class App extends Component {
       }
     }
   };
-
+  onHandleDropdownChange=(e)=>{
+    console.log(">>> ####  change dropdown value event!!")
+}
   render() {
     return (
       <div className="app-container">
@@ -248,6 +252,8 @@ class App extends Component {
             itemheight={this.state.itemheight}
             selectedItem={this.state.selectedItem}
             nonEditableName={this.state.nonEditableName}
+            dropdownListData={this.state.dropdownListData}
+            onHandleDropdownChange={this.onHandleDropdownChange}
           />
         </div>
       </div>
