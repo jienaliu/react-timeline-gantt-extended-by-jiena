@@ -52,7 +52,7 @@ The component is capable of:
 
 ## Installation
 ```bash
-npm install react-gantt-timeline
+npm install react-gantt-timeline-ultra
 ```
 The component has the following dependencies: moment, react-sizeme
 
