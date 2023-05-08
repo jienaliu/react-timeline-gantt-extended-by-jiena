@@ -1,5 +1,5 @@
 {
-  "name": "react-gantt-timeline",
+  "name": "react-gantt-timeline-ultra",
   "version": "0.4.3",
   "description": "",
   "main": "dist/index.js",
@@ -74,7 +74,7 @@
     "calendar",
     "project management"
   ],
-  "homepage": "https://github.com/guiqui/react-timeline-gantt",
+  "homepage": "https://github.com/guiqui/react-timeline-gantt-ultra",
   "dependencies": {
     "jest-config": "^25.1.0",
     "moment": "^2.24.0",
@@ -84,6 +84,6 @@
   },
   "collective": {
     "type": "opencollective",
-    "url": "https://opencollective.com/react-timeline-gantt"
+    "url": "https://opencollective.com/react-timeline-gantt-ultra"
   }
 }
