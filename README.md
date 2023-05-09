@@ -1,6 +1,6 @@
 
 
-# react-gantt-timeline
+# react-gantt-timeline-ultra
 [![npm](https://img.shields.io/npm/v/react-gantt-timeline.svg?style=flat-square)](http://npm.im/react-gantt-timeline)
 [![MIT License](https://img.shields.io/npm/l/react-list.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![Travis](https://travis-ci.org/guiqui/react-timeline-gantt.svg?branch=master)](https://travis-ci.org/guiqui/react-timeline-gantt)
@@ -14,7 +14,7 @@ A react timeline gantt component.
 ![screencast](https://guiqui.github.io/react-timeline-gantt/demo.gif)
 
 ## About
-React-timeline-gantt is a component built to display and manage calendar gantt charts.
+React-timeline-gantt-ultra is a component built to display and manage calendar gantt charts.
 It use virtual rendering to be reactive an efficient.
 
 [![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gquiman)
