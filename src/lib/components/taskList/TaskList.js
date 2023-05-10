@@ -44,22 +44,26 @@ export class TaskRow extends Component {
         ) : (
             <ContentEditable value={this.props.label} index={this.props.index} onChange={this.onChange} />
           )}
-        <Dropdown dropdownListData={this.props.dropdownListData} onHandleDropdownChange={this.props.onHandleDropdownChange} style={{textAlign:'right'}}/>
+        <div style={{ width: '200px', textAlign: 'right' }}>
+          <Dropdown
+            {...this.props}
+            style={{textAlign:'right'}}/>
+        </div>
       </div>
     );
   }
 }
-const Dropdown=({dropdownListData,onHandleDropdownChange})=>{
+const Dropdown=({dropdownListData,onHandleDropdownChange, item})=>{
   if(!dropdownListData){
     return null;
   }
   return(
     <select id="simple-select" onChange={onHandleDropdownChange}>
       <option key={-1} value={-1}>Assign project to...</option>
-      {dropdownListData.map((item)=>{
+      {dropdownListData.map((optionItem)=>{
         return(
-        <option key={item.id} value={item.value}>
-          {item.value}
+        <option key={optionItem.id} value={optionItem.id} selected ={optionItem.id === item.assignedTo}>
+          {optionItem.value}
         </option>)
 
     })}

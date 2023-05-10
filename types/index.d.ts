@@ -27,6 +27,7 @@ type Task = {
     end: Date;
     name: string;
     color?: string;
+    assignedTo?: string | number;
 };
 
 type Link = {
