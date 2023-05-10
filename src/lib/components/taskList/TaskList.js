@@ -59,7 +59,7 @@ const Dropdown=({dropdownListData,onHandleDropdownChange, item})=>{
   }
   return(
     <select id="simple-select" onChange={onHandleDropdownChange}>
-      <option key={-1} value={-1}>Assign project to...</option>
+      <option key={-1} value={-1}>......</option>
       {dropdownListData.map((optionItem)=>{
         return(
         <option key={optionItem.id} value={optionItem.id} selected ={optionItem.id === item.assignedTo}>
