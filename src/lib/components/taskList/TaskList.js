@@ -88,7 +88,7 @@ export default class TaskList extends Component {
             key={i + item.id}
             index={item.name + i}
             item={item}
-            label={key}
+            label={item.name}
             top={i * this.props.itemheight}
             itemheight={this.props.itemheight}
             isSelected={this.props.selectedItem == item}
