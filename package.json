@@ -1,6 +1,6 @@
 {
   "name": "react-gantt-timeline-ultra",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -74,16 +74,12 @@
     "calendar",
     "project management"
   ],
-  "homepage": "https://github.com/guiqui/react-timeline-gantt-ultra",
+  "homepage": "https://github.com/jienaliu/react-timeline-gantt-ultra",
   "dependencies": {
     "jest-config": "^25.1.0",
     "moment": "^2.24.0",
     "opencollective": "^1.0.3",
     "opencollective-postinstall": "^2.0.1",
     "react-sizeme": "^2.5.2"
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/react-timeline-gantt-ultra"
   }
 }
