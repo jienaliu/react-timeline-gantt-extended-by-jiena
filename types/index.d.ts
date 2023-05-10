@@ -12,7 +12,14 @@ type TimeLineProps = {
     onCreateLink?: (link: Link) => void;
     onSelectItem?: (item: object) => void;
     onHorizonChange?: (start: Date, end: Date) => void;
+    dropdownListData: DropdownOption[];
+    onHandleDropdownChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
+
+type DropdownOption = {
+    id: number;
+    value: string
+}
 
 type Task = {
     id: string | number;

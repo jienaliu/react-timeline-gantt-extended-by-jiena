@@ -7,7 +7,7 @@ module.exports ={
     path:path.resolve('dist'),
     filename:'index.js',
     libraryTarget: 'umd',
-    library: 'react-gantt-timeline',
+    library: 'react-gantt-timeline-ultra',
     umdNamedDefine: true  
   },
   resolve: {      
