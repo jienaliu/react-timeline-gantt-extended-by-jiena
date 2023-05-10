@@ -63,7 +63,7 @@ const Dropdown=({dropdownListData,onHandleDropdownChange, item})=>{
       {dropdownListData.map((optionItem)=>{
         return(
         <option key={optionItem.id} value={optionItem.id} selected ={optionItem.id === item.assignedTo}>
-          {optionItem.value}
+          {optionItem.label}
         </option>)
 
     })}
