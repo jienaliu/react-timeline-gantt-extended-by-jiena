@@ -31,7 +31,7 @@ class Generator {
   generateAssignee(){
     let projectAssigneeList=[];
     for(let i=0; i<10;i++){
-      projectAssigneeList.push({id:i,value:"User-"+i});
+      projectAssigneeList.push({id:i, label:"User-"+i});
     }
     return projectAssigneeList;
   }
@@ -40,7 +40,7 @@ class Generator {
     let endDate = new Date(starDate.getTime());
     endDate.setDate(starDate.getDate() + Math.random() * 20);
     let id = ObjectHelper.genID();
-    let record = { id: id, name: `Task ${i}`, start: starDate, end: endDate, color: this.getRandomColor(), assignedTo: i };
+    let record = { id: id, name: `Task ${i}`, start: starDate, end: endDate, color: this.getRandomColor(), assignedTo: null };
     result.push(record);
     return id;
   }

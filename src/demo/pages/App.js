@@ -86,7 +86,8 @@ class App extends Component {
       timelineMode: 'month',
       links: result.links,
       nonEditableName: false,
-      dropdownListData:projectAssignee
+      dropdownListData:projectAssignee,
+      dropdownListDefaultLabel: "Select",
     };
   }
 
@@ -180,8 +181,8 @@ class App extends Component {
       }
     }
   };
-  onHandleDropdownChange=(e)=>{
-    console.log(">>> ####  change dropdown value event!!")
+  onHandleDropdownChange=(e, item)=>{
+    console.log(">>> ####  change dropdown value event!!", e.target.value, item)
 }
   render() {
     return (
@@ -241,7 +242,7 @@ class App extends Component {
         </div>
         <div className="time-line-container">
           <TimeLine
-            // config={config}
+            config={config}
             data={this.state.data}
             links={this.state.links}
             onHorizonChange={this.onHorizonChange}
@@ -253,6 +254,7 @@ class App extends Component {
             selectedItem={this.state.selectedItem}
             nonEditableName={this.state.nonEditableName}
             dropdownListData={this.state.dropdownListData}
+            dropdownListDefaultLabel={this.state.dropdownListDefaultLabel}
             onHandleDropdownChange={this.onHandleDropdownChange}
           />
         </div>

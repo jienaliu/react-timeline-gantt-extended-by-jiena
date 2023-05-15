@@ -25,6 +25,7 @@ export class TaskRow extends Component {
   };
 
   render() {
+    console.log(">>>> row props are: ",this.props);
     return (
       <div
         className="timeLine-side-task-row"
@@ -53,19 +54,20 @@ export class TaskRow extends Component {
     );
   }
 }
-const Dropdown=({dropdownListData,onHandleDropdownChange, item})=>{
+const Dropdown=({dropdownListData, dropdownListDefaultLabel,onHandleDropdownChange, item})=>{
   if(!dropdownListData){
     return null;
   }
   return(
-    <select id="simple-select" onChange={onHandleDropdownChange}>
-      <option key={-1} value={-1}>......</option>
+    <select id="simple-select"
+            onChange={(e)=> onHandleDropdownChange(e, item)}
+            defaultValue={item.assignedTo}>
+      {dropdownListDefaultLabel && <option key={-1} value={null}>{dropdownListDefaultLabel}</option>}
       {dropdownListData.map((optionItem)=>{
         return(
-        <option key={optionItem.id} value={optionItem.id} selected ={optionItem.id === item.assignedTo}>
+        <option key={optionItem.id} value={optionItem.id} selected={optionItem.id === item.assignedTo}>
           {optionItem.label}
         </option>)
-
     })}
     </select>
   )
@@ -101,6 +103,7 @@ export default class TaskList extends Component {
             nonEditable={this.props.nonEditable}
             dropdownListData={this.props.dropdownListData}
             onHandleDropdownChange={this.props.onHandleDropdownChange}
+            dropdownListDefaultLabel ={this.props.dropdownListDefaultLabel}
           />
         );
       });
