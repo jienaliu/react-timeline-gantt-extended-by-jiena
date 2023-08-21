@@ -170,7 +170,7 @@
 .timeLine-side-main {
   flex: 0 0 auto;
   width: 108px;
-  min-width: 108px;
+  min-width: 347px;
   display: flex;
   flex-direction: row;
 }
